@@ -4,14 +4,16 @@
 
 package kotlinx.uuid.exposed
 
-import kotlinx.uuid.*
-import org.jetbrains.exposed.dao.id.*
-import org.jetbrains.exposed.sql.*
-import java.security.*
-import kotlin.random.*
+import kotlinx.uuid.UUID
+import kotlinx.uuid.generateUUID
+import org.jetbrains.exposed.dao.id.EntityID
+import org.jetbrains.exposed.dao.id.IdTable
+import org.jetbrains.exposed.sql.Column
+import java.security.SecureRandom
+import kotlin.random.asKotlinRandom
 
 /**
- * Identity table with a key column having type [UUID]. Unique identifiers are genreated before
+ * Identity table with a key column having type [UUID]. Unique identifiers are generated before
  * insertion by [UUID.Companion.generateUUID] with [SecureRandom] by default.
  *
  * @param name of the table.
