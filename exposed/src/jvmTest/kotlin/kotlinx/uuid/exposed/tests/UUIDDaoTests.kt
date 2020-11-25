@@ -18,7 +18,7 @@ class UUIDDaoTests {
         val db = Database.connect("jdbc:h2:mem:test", driver = "org.h2.Driver")
         transaction(db) {
             SchemaUtils.create(TestTables)
-            assertTrue(UUIDTableTest.TestTable.exists())
+            assertTrue(TestTables.exists())
             assertTrue(TestTable.all().toList().isEmpty())
             val newId = TestTable.new { }.id.value
             assertNotNull(newId)
