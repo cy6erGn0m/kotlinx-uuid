@@ -1,6 +1,6 @@
 [![JetBrains incubator project](https://jb.gg/badges/incubator.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub) 
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-[ ![Download](https://api.bintray.com/packages/cy6ergn0m/uuid/kotlinx-uuid/images/download.svg?version=0.0.2) ](https://bintray.com/cy6ergn0m/uuid/kotlinx-uuid/0.0.2/link)
+[![Download](https://api.bintray.com/packages/cy6ergn0m/uuid/kotlinx-uuid/images/download.svg)](https://bintray.com/cy6ergn0m/uuid/kotlinx-uuid/_latestVersion)
 
 # kotlinx-uuid
 
