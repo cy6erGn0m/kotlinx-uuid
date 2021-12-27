@@ -4,10 +4,6 @@
 
 description = "kotlinx-uuid integration for exposed"
 
-repositories {
-    maven("https://dl.bintray.com/kotlin/exposed")
-}
-
 kotlin {
     jvm()
 
