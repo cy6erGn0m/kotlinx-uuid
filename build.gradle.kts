@@ -74,11 +74,11 @@ allprojects {
 
             repositories {
                 maven {
-                    name = "Bintray"
-                    url = uri("https://api.bintray.com/maven/cy6ergn0m/uuid/kotlinx-uuid/;publish=0;override=1")
+                    name = "GitHubPackages"
+                    url = uri("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuid")
                     credentials {
-                        username = project.findProperty("bintray.user") as String? ?: System.getenv("BINTRAY_USERNAME")
-                        password = project.findProperty("bintray.key") as String? ?: System.getenv("BINTRAY_TOKEN")
+                        username = System.getenv("USERNAME")
+                        password = System.getenv("TOKEN")
                     }
                 }
             }
