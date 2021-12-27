@@ -4,16 +4,16 @@
 
 package kotlinx.uuid.ktor.tests
 
-import io.ktor.util.*
+import io.ktor.util.converters.*
+import io.ktor.util.reflect.*
 import kotlinx.uuid.*
 import kotlinx.uuid.ktor.*
-import java.lang.reflect.*
 import kotlin.test.*
 
 internal const val SOME_UUID_STRING: String = "1b3e4567-e99b-13d3-a476-446657420000"
 
 class ConversionTest {
-    private val type: Type = UUID::class.java
+    private val type: TypeInfo = typeInfo<UUID>()
 
     @Test
     fun smokeToValuesTest() {
@@ -52,7 +52,7 @@ class ConversionTest {
     @Test
     fun wrongTypeNotSupported() {
         assertFailsWith<DataConversionException> {
-            UUIDConversionService.fromValues(listOf(SOME_UUID_STRING), String::class.java)
+            UUIDConversionService.fromValues(listOf(SOME_UUID_STRING), typeInfo<String>())
         }
     }
 

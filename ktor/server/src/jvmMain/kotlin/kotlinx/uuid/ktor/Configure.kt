@@ -4,7 +4,7 @@
 
 package kotlinx.uuid.ktor
 
-import io.ktor.features.*
+import io.ktor.util.converters.*
 import kotlinx.uuid.*
 
 /**
@@ -12,4 +12,14 @@ import kotlinx.uuid.*
  */
 public fun DataConversion.Configuration.uuid() {
     convert(UUID::class, UUIDConversionService)
+}
+
+/**
+ * Installs kotlinx-uuid [UUID] data converter to [DataConversion] feature.
+ */
+public fun io.ktor.features.DataConversion.Configuration.uuid() {
+    convert<UUID> {
+        encode { toValuesImpl(it) }
+        decode { values, type -> fromValuesImpl(values, type) }
+    }
 }
