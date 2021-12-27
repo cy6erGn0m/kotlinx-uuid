@@ -27,9 +27,9 @@ class DataConversionFeatureTest {
         assertEquals(listOf(SOME_UUID_STRING), feature.toValues(UUID(SOME_UUID_STRING)))
     }
 
+    // this is still not working: ktor doesn't pick up conversion services in delegation
     @Test
     @Ignore
-    // this is still not working: ktor doesn't pick up conversion services in delegation
     fun testCallParameterDecoding(): Unit = withTestApplication {
         application.install(DataConversion) {
             uuid()

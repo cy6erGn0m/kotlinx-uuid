@@ -30,7 +30,7 @@ public fun UUID.Companion.fromString(name: String): UUID = UUID(name)
 @Deprecated(
     "Use UUID.generateUUID instead specifying Random if necessary (the default is non-secure!)",
     level = DeprecationLevel.ERROR,
-    replaceWith = ReplaceWith("generateUUID(Random.Default)", "kotlin.random.Random"),
+    replaceWith = ReplaceWith("generateUUID(Random.Default)", "kotlin.random.Random")
 )
 public fun UUID.Companion.randomUUID(): UUID {
     return generateUUID(Random.Default)

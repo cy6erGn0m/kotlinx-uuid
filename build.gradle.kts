@@ -28,7 +28,7 @@ allprojects {
         }
 
         convention["kotlinter"].cast<KotlinterExtension>().apply {
-            disabledRules = arrayOf("no-wildcard-imports")
+            disabledRules = arrayOf("no-wildcard-imports", "no-unused-imports")
             experimentalRules = true
         }
     }
