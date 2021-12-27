@@ -35,3 +35,5 @@ bin/
 .DS_Store
 
 hs_err_pid*.log
+
+kotlin-js-store
