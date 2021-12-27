@@ -1,6 +1,5 @@
-[![JetBrains incubator project](https://jb.gg/badges/incubator.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub) 
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-[ ![Download](https://api.bintray.com/packages/cy6ergn0m/uuid/kotlinx-uuid/images/download.svg?version=0.0.2) ](https://bintray.com/cy6ergn0m/uuid/kotlinx-uuid/0.0.2/link)
+
 
 # kotlinx-uuid
 
@@ -39,12 +38,12 @@ Supported platforms are:
 
 ```kotlin
 repositories {
-    maven("https://dl.bintray.com/cy6ergn0m/uuid")
+    maven("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuid")
 }
 
 val commonMain by getting {
     dependencies {
-        implementation("org.jetbrains.kotlinx.experimental:kotlinx-uuid-core:0.0.2")
+        implementation("org.jetbrains.kotlinx.experimental:kotlinx-uuid-core:0.1.0")
     }
 }
 ```
@@ -114,12 +113,12 @@ Include `ktor-server-uuid` artifact:
 
 ```kotlin
 repositories {
-    maven("https://dl.bintray.com/cy6ergn0m/uuid")
+    maven("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuid")
 }
 
 val jvmMain by getting {
     dependencies {
-        implementation("org.jetbrains.kotlinx.experimental:ktor-server-uuid:0.0.2")
+        implementation("org.jetbrains.kotlinx.experimental:ktor-server-uuid:0.1.0")
     }
 }
 ```
@@ -136,6 +135,9 @@ Unfortunately, ktor [doesn't provide (KTOR-1309)](https://youtrack.jetbrains.com
 any way to plug converters automatically, so you need to configure it manually.
 Also, in some cases, like delegating to call parameters, it will not work
 and there is no workaround at the moment.
+
+At the moment, `DataConversion` is going through the deprecation cycle due to server MPP migration. So there are two `ConversionService` interfaces. 
+Using `uuid()` function is recommended without referreing to particular types.
 
 ## Migrating from java.util.UUID
 
@@ -179,11 +181,11 @@ to include the corresponding dependency and use DSL functions:
 
 ```kotlin
 repositories {
-    maven("https://dl.bintray.com/cy6ergn0m/uuid")
+    maven("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuidd")
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx.experimental:exposed-uuid:0.0.2")
+    implementation("org.jetbrains.kotlinx.experimental:exposed-uuid:0.1.0")
 }
 ```
 
@@ -226,11 +228,11 @@ you need to register the serializer:
 
 ```kotlin
 repositories {
-    maven("https://dl.bintray.com/cy6ergn0m/uuid")
+    maven("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuid")
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx.experimental:gson-uuid:0.0.2")
+    implementation("org.jetbrains.kotlinx.experimental:gson-uuid:0.1.0")
 }
 ```
 
@@ -247,11 +249,11 @@ you need to register the module:
 
 ```kotlin
 repositories {
-    maven("https://dl.bintray.com/cy6ergn0m/uuid")
+    maven("https://maven.pkg.github.com/cy6ergn0m/kotlinx-uuid")
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx.experimental:jackson-module-uuid:0.0.2")
+    implementation("org.jetbrains.kotlinx.experimental:jackson-module-uuid:0.1.0")
 }
 ```
 
