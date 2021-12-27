@@ -38,8 +38,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings.progressiveMode = true
-            languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
-            languageSettings.useExperimentalAnnotation("kotlinx.uuid.InternalAPI")
+            languageSettings.optIn("kotlin.RequiresOptIn")
+            languageSettings.optIn("kotlinx.uuid.InternalAPI")
         }
 
         val commonMain by getting {
@@ -73,7 +73,7 @@ kotlin {
 }
 
 jacoco {
-    toolVersion = "0.8.6"
+    toolVersion = "0.8.7"
     reportsDir = file("${rootProject.buildDir}/reports/jacoco")
 }
 

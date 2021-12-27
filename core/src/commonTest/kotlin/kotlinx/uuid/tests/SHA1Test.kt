@@ -92,7 +92,7 @@ class SHA1Test {
     @Test
     fun testMillionA() {
         val buffer = ByteArray(1000)
-        buffer.fill('a'.toByte())
+        buffer.fill('a'.code.toByte())
 
         repeat(1000) {
             sha1.update(buffer)

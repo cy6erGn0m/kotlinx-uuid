@@ -14,8 +14,8 @@ class ParserTest {
     fun smoke() {
         parseUUID(SOME_UUID_STRING).assertFields()
         parseUUID(SOME_UUID_STRING.replace('b', 'B')).assertFields()
-        parseUUID(SOME_UUID_STRING.toUpperCase()).assertFields()
-        parseUUID(SOME_UUID_STRING.toUpperCase().replace('B', 'b')).assertFields()
+        parseUUID(SOME_UUID_STRING.uppercase()).assertFields()
+        parseUUID(SOME_UUID_STRING.uppercase().replace('B', 'b')).assertFields()
     }
 
     @Test
@@ -42,21 +42,21 @@ class ParserTest {
         }
 
         assertFailsWith<UUIDFormatException> {
-            parseUUID(SOME_UUID_STRING.toUpperCase().replace('B', 'X'))
+            parseUUID(SOME_UUID_STRING.uppercase().replace('B', 'X'))
         }.let {
             assertTrue(it.message.contains("Unexpected octet character"))
             assertTrue(it.message.contains("X"))
         }
 
         assertFailsWith<UUIDFormatException> {
-            parseUUID(SOME_UUID_STRING.toUpperCase().replace('B', 'x'))
+            parseUUID(SOME_UUID_STRING.uppercase().replace('B', 'x'))
         }.let {
             assertTrue(it.message.contains("Unexpected octet character"))
             assertTrue(it.message.contains("x"))
         }
 
         assertFailsWith<UUIDFormatException> {
-            parseUUID(SOME_UUID_STRING.toUpperCase().replace('B', '.'))
+            parseUUID(SOME_UUID_STRING.uppercase().replace('B', '.'))
         }.let {
             assertTrue(it.message.contains("Unexpected octet character"))
             assertTrue(it.message.contains("."))

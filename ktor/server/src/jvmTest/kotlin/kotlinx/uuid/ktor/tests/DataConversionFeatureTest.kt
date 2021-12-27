@@ -29,7 +29,6 @@ class DataConversionFeatureTest {
 
     @Test
     @Ignore
-    @OptIn(KtorExperimentalAPI::class)
     // this is still not working: ktor doesn't pick up conversion services in delegation
     fun testCallParameterDecoding(): Unit = withTestApplication {
         application.install(DataConversion) {
