@@ -51,9 +51,7 @@ allprojects {
                         developers {
                             developer {
                                 name.set("Sergey Mashkov")
-                                email.set("sergey.mashkov@jetbrains.com")
-                                organization.set("JetBrains s.r.o.")
-                                organizationUrl.set("https://jetbrains.com")
+                                email.set("cy6ergn0m@gmail.com")
                             }
                         }
                         licenses {
