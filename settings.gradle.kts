@@ -9,7 +9,6 @@ pluginManagement {
     repositories {
         mavenCentral()
         gradlePluginPortal()
-        maven("https://kotlin.bintray.com/kotlinx")
     }
 
     resolutionStrategy {
@@ -28,7 +27,6 @@ pluginManagement {
 buildscript {
     repositories {
         mavenCentral()
-        maven("https://kotlin.bintray.com/kotlinx")
     }
 }
 
