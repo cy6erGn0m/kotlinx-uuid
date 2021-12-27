@@ -2,7 +2,6 @@
  * Copyright 2020-2020 JetBrains s.r.o and contributors. Use of this source code is governed by the Apache 2.0 license.
  */
 
-import org.jetbrains.kotlin.utils.addToStdlib.*
 import org.jmailen.gradle.kotlinter.*
 
 plugins {
@@ -27,7 +26,7 @@ allprojects {
             plugin("org.jmailen.kotlinter")
         }
 
-        convention["kotlinter"].cast<KotlinterExtension>().apply {
+        extensions.findByType<KotlinterExtension>()?.apply {
             disabledRules = arrayOf("no-wildcard-imports", "no-unused-imports")
             experimentalRules = true
         }
