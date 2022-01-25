@@ -26,6 +26,6 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@996094e8e808208e5738e8413b3f55d24d1c1eb7
+      uses: gradle/gradle-build-action@b9c806c75d3cb8998f905077e62bb670e7fa7e02
       with:
         arguments: build
